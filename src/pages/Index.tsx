@@ -10,13 +10,8 @@ import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/layout/Header";
 
-// Import fonts
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
+// Import Google fonts directly in index.html instead of CSS imports
+// Font styling is already defined in tailwind.config.ts and index.css
 
 const Index = () => {
   // State to track dark mode
