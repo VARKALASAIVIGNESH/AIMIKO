@@ -9,6 +9,8 @@ import CallToAction from "@/components/sections/CallToAction";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/layout/Header";
+
+// Import fonts
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
