@@ -1,63 +1,60 @@
-
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 const About = () => {
-  const team = [
-    {
-      name: "Partner 1",
-      role: "AI Engineer & Co-Founder",
-      avatar: "/placeholder.svg",
-      initials: "P1"
-    },
-    {
-      name: "Partner 2",
-      role: "ML Specialist & Co-Founder",
-      avatar: "/placeholder.svg",
-      initials: "P2"
-    }
-  ];
-
   return (
     <section id="about" className="py-20 bg-gray-50 dark:bg-[#121212]">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-poppins text-[#212121] dark:text-[#E0E0E0] mb-4">
             About Us
           </h2>
-          <div className="w-20 h-1 bg-[#7B1FA2] mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#C62828] to-[#7B1FA2] mx-auto"></div>
         </div>
-        
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-xl text-gray-600 dark:text-gray-300 font-inter">
-            We're a two-person AI studio based in Hyderabad, India, serving startups worldwide. Our expertise in artificial intelligence and machine learning helps businesses automate processes, gain insights, and create exceptional customer experiences.
+
+        {/* Brand Description */}
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xl text-gray-700 dark:text-gray-300 font-inter leading-relaxed">
+            <strong className="text-[#C62828] dark:text-[#F06292]">AIMIKO</strong> is an AI-first innovation studio crafting intelligent solutions for next-gen startups. 
+            From custom chatbots and LLM-powered assistants to automation systems and AI diagnostics, 
+            we help businesses scale with smart, reliable technology. 
+            Based in India and serving globally, our mission is to make artificial intelligence simple, scalable, and impactful.
           </p>
         </div>
-        
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-12 mt-16">
-          {team.map((member, index) => (
-            <div 
-              key={index} 
-              className={cn(
-                "flex flex-col items-center transition-all duration-300",
-                "hover:transform hover:scale-105"
-              )}
+
+        {/* Value Highlights */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+          {[
+            {
+              title: "LLM Expertise",
+              desc: "Specialized in GPT, LLaMA, Gemini & custom-trained models.",
+              color: "from-[#8E24AA] to-[#E040FB]",
+            },
+            {
+              title: "Fast Delivery",
+              desc: "Agile workflows to deliver MVPs and solutions in record time.",
+              color: "from-[#3949AB] to-[#7C4DFF]",
+            },
+            {
+              title: "Tailored AI",
+              desc: "Every solution is custom-built to match your use-case & audience.",
+              color: "from-[#00ACC1] to-[#26C6DA]",
+            },
+            {
+              title: "Global Access",
+              desc: "Serving clients across India, the US, and worldwide.",
+              color: "from-[#43A047] to-[#66BB6A]",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className={`p-6 rounded-xl shadow-md dark:shadow-none bg-white dark:bg-[#1A1A1A] text-center transition-all duration-300 hover:scale-105 hover:shadow-xl`}
             >
-              <div className="mb-6 relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-[#C62828] to-[#7B1FA2] animate-pulse blur-sm opacity-70"></div>
-                <Avatar className="h-40 w-40 border-4 border-white dark:border-[#1A1A1A] relative">
-                  <AvatarImage src={member.avatar} alt={member.name} />
-                  <AvatarFallback className="bg-[#7B1FA2] text-white text-2xl">
-                    {member.initials}
-                  </AvatarFallback>
-                </Avatar>
-              </div>
-              
-              <h3 className="text-xl font-semibold font-poppins text-[#212121] dark:text-[#E0E0E0]">
-                {member.name}
+              <h3
+                className={`text-xl font-semibold mb-3 bg-clip-text text-transparent bg-gradient-to-r ${item.color}`}
+              >
+                {item.title}
               </h3>
-              <p className="text-[#7B1FA2] dark:text-[#9C27B0] font-inter">
-                {member.role}
+              <p className="text-gray-600 dark:text-gray-400 text-sm font-inter">
+                {item.desc}
               </p>
             </div>
           ))}

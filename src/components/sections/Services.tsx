@@ -1,7 +1,8 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageSquare, Brain, Bot, Database, LineChart, Code } from "lucide-react";
 import { cn } from "@/lib/utils";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 interface Service {
   icon: React.ReactNode;
@@ -10,40 +11,44 @@ interface Service {
 }
 
 const Services = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 600 });
+  }, []);
+
   const services: Service[] = [
     {
-      icon: <MessageSquare className="h-10 w-10" />,
+      icon: <MessageSquare className="h-10 w-10" aria-hidden="true" />,
       title: "AI Chatbots & Assistants",
       description: "Intelligent conversational interfaces that enhance customer experience and automate support."
     },
     {
-      icon: <Brain className="h-10 w-10" />,
+      icon: <Brain className="h-10 w-10" aria-hidden="true" />,
       title: "AI-Powered Assessment Systems",
       description: "Automated evaluation tools for education, recruitment, and skill verification."
     },
     {
-      icon: <Bot className="h-10 w-10" />,
+      icon: <Bot className="h-10 w-10" aria-hidden="true" />,
       title: "Web Scraping & Automation",
       description: "Data collection and process automation tools to save time and gather valuable insights."
     },
     {
-      icon: <Code className="h-10 w-10" />,
+      icon: <Code className="h-10 w-10" aria-hidden="true" />,
       title: "Custom AI Tools",
       description: "Specialized solutions like data analyzers, image classification, and NLP pipelines."
     },
     {
-      icon: <LineChart className="h-10 w-10" />,
+      icon: <LineChart className="h-10 w-10" aria-hidden="true" />,
       title: "AI Dashboards & Insights",
       description: "Interactive visualizations and analytics to transform complex data into actionable intelligence."
     },
     {
-      icon: <Database className="h-10 w-10" />,
+      icon: <Database className="h-10 w-10" aria-hidden="true" />,
       title: "Data Processing Pipelines",
       description: "Efficient systems for cleaning, transforming, and analyzing large volumes of data."
     }
   ];
-
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <section id="services" className="py-20 bg-white dark:bg-[#0A0A0A]">
@@ -57,12 +62,14 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div 
+            <article 
               key={index}
+              tabIndex={0}
               className={cn(
                 "group bg-gray-50 dark:bg-[#121212] rounded-lg p-6 transition-all duration-300",
                 "hover:shadow-lg border-l-4 border-transparent",
-                "hover:border-l-4 hover:border-[#C62828]"
+                "hover:border-l-4 hover:border-[#C62828]",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C62828]"
               )}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -72,7 +79,7 @@ const Services = () => {
               <div className={cn(
                 "text-[#C62828] mb-4 transition-transform duration-300",
                 hoveredIndex === index && "transform scale-110"
-              )}>
+              )} aria-hidden="true">
                 {service.icon}
               </div>
               
@@ -86,7 +93,7 @@ const Services = () => {
               
               <a 
                 href="#contact" 
-                className="inline-block text-[#7B1FA2] dark:text-[#9C27B0] font-medium hover:text-[#C62828] dark:hover:text-[#C62828] transition-colors"
+                className="inline-block text-[#7B1FA2] dark:text-[#9C27B0] font-medium hover:text-[#C62828] dark:hover:text-[#C62828] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7B1FA2]"
                 onClick={(e) => {
                   e.preventDefault();
                   const contactSection = document.getElementById("contact");
@@ -100,7 +107,7 @@ const Services = () => {
               >
                 Contact for Quote →
               </a>
-            </div>
+            </article>
           ))}
         </div>
       </div>

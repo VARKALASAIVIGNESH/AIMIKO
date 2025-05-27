@@ -155,3 +155,43 @@ html {
 .dark ::-webkit-scrollbar-thumb:hover {
   background: #777;
 }
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-light {
+  background: linear-gradient(270deg, #6A1B9A, #8E24AA, #BA68C8);
+  background-size: 600% 600%;
+}
+
+.dark .bg-gradient-dark {
+  background: linear-gradient(270deg, #4A148C, #7B1FA2, #9C27B0);
+  background-size: 600% 600%;
+}
+
+.animate-gradient {
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff176, 0 0 40px #fff176;
+  }
+}
+
+.animate-glow {
+  animation: glow 2.5s infinite ease-in-out;
+}
+
