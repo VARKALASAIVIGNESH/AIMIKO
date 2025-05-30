@@ -45,7 +45,7 @@ const Projects = () => {
     },
     {
       icon: <Image size={36} />,
-      title: "Image Classification Modules",
+      title: "Image Classification and Open CV Modules",
       description:
         "AI models for healthcare diagnostics, security monitoring, and automated inventory management.",
       image:
@@ -92,7 +92,7 @@ const Projects = () => {
             const isItineraryProject =
               project.title === "Travel Itinerary Planners using LLMs";
             const isImageClassificationProject =
-              project.title === "Image Classification Modules";
+              project.title === "Image Classification and Open CV Modules";
             const isNLPProject =
               project.title === "NLP Text Analysis & PDF QA (Gemini)";
             const isWebChatbotsProject = project.title === "Web Chatbots";

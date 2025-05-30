@@ -73,11 +73,12 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <img
-          src={mainLogo}
-          alt="AIMIKO Logo"
-          className="h-12 w-auto rounded-md border-2 border-[#7B1FA2] shadow-lg"
-          style={{ filter: darkMode ? "brightness(0.8)" : "brightness(1)" }}
-        />
+  src={mainLogo}
+  alt="AIMIKO Logo"
+  className="h-12 w-auto rounded-md shadow-lg"
+  style={{ filter: darkMode ? "brightness(0.8)" : "brightness(1)" }}
+/>
+
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-6">

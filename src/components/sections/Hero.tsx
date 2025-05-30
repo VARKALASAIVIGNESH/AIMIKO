@@ -45,7 +45,7 @@ const Hero = () => {
                 lineHeight: "1.4",
               }}
             >
-              Innovate, Automate, Elevate with AI
+              Innovate, Automate and Elevate with AI
             </p>
           </div>
 

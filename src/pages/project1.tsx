@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import img9 from "../images/img9.jpg";
-import video1 from "../images/video4.mp4";
+import img1 from "../images/img1.jpg";
+import img2 from "../images/img2.jpg";
 
-const Project6 = () => {
+const Project1 = () => {
   const navigate = useNavigate();
 
   return (
@@ -18,90 +18,107 @@ const Project6 = () => {
       </button>
 
       <h1 className="text-4xl font-bold font-poppins mb-6">
-        ⚙️ Data Pipelines & Automations Powered by LLaMA
+        📘 AI-Powered Assessment – Smart Test Generation Platform
       </h1>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3">Overview:</h2>
         <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-          Discover how we harness the power of LLaMA to automate repetitive tasks and uncover insights from raw data. Our solutions simplify workflows and supercharge productivity by intelligently analyzing and automating data pipelines and social media engagement.
+          I independently designed and developed an AI-powered assessment platform
+          to simplify test creation for educators using advanced machine learning and
+          NLP techniques. This solution automatically generates high-quality multiple-choice
+          questions from uploaded PDF materials, eliminating the need for manual question
+          setting and enabling personalized learning at scale.
         </p>
       </section>
 
-      {/* Excel Data Analyzer */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3">🚀 Key Features</h2>
+        <ul className="list-disc list-inside space-y-4 text-gray-700 dark:text-gray-300">
+          <li>
+            <strong>Auto-Generated Assessments:</strong> Upload any PDF with course content
+            and instantly get 10–20 contextually relevant multiple-choice questions generated
+            using AI.
+          </li>
+          <li>
+            <strong>NLP-Powered Content Analysis:</strong> Leveraged cutting-edge NLP libraries
+            and machine learning models (built with PyTorch, spaCy, and LLAMA API) to
+            understand text, extract key concepts, and generate intelligent questions.
+          </li>
+          <li>
+            <strong>Seamless Teacher & Student Dashboard:</strong> Designed with a unified login
+            system and mobile-responsive interface. Teachers can manage test creation; students
+            can easily access, attempt, and submit tests.
+          </li>
+          <li>
+            <strong>Real-Time Evaluation & Feedback:</strong> Integrated auto-grading,
+            performance analytics, and instant feedback features, helping both students and
+            educators track progress and learning gaps efficiently.
+          </li>
+          <li>
+            <strong>Smart Randomization:</strong> Dynamic question randomization for every user
+            to ensure fairness and integrity during online testing.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3">💡 Why This Matters</h2>
+        <p className="leading-relaxed text-gray-700 dark:text-gray-300">
+          Manual assessment creation is time-consuming and repetitive. This AI-powered solution
+          saves educators valuable hours and enhances the learning experience for students by
+          generating personalized, accurate, and relevant assessments instantly. It’s flexible,
+          scalable, and easily adaptable for schools, colleges, coaching centers, and EdTech platforms.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-3">🔧 Technologies Used</h2>
+        <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          <li><strong>Frontend:</strong> HTML5, CSS3</li>
+          <li><strong>Backend:</strong> Python, PyTorch, Django</li>
+          <li><strong>AI & NLP:</strong> spaCy / NLTK, LLAMA API, PDF text extraction libraries</li>
+          <li><strong>Realtime Updates:</strong> Firebase Cloud Messaging (FCM)</li>
+          <li><strong>Deployment Ready:</strong> Lightweight, scalable, and fully modifiable</li>
+        </ul>
+      </section>
+
       <section className="mb-12">
-        <h2 className="text-3xl font-bold font-poppins mb-6">
-          📊 Excel Data Analyzer using LLaMA
-        </h2>
+        <h2 className="text-2xl font-semibold mb-6">Example Images</h2>
 
-        <div className="mb-6">
+        <figure className="mb-8">
           <img
-            src={img9}
-            alt="Excel Data Analyzer"
+            src={img1}
+            alt="AI model analyzing PDF content"
             className="w-full rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
           />
-        </div>
+          <figcaption className="text-sm text-center text-gray-500 dark:text-gray-400 mt-2">
+            Figure 1: AI model analyzing PDF content
+          </figcaption>
+        </figure>
 
-        <p className="leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
-          Upload any Excel sheet — whether it's sales data, surveys, financial reports, or custom logs — and ask it anything. Our system uses LLaMA with pandas to analyze the sheet and return human-readable insights instantly.
-        </p>
-
-        <h3 className="text-2xl font-semibold mb-3">🚀 Key Features</h3>
-        <ul className="list-disc list-inside space-y-3 text-gray-700 dark:text-gray-300 mb-6">
-          <li>Supports all Excel formats (.xlsx, .xls, .csv)</li>
-          <li>Handles small to very large datasets with ease</li>
-          <li>Natural language queries — ask anything in plain English</li>
-          <li>Quick, intelligent, context-aware responses powered by LLaMA</li>
-          <li>No coding or formula knowledge required</li>
-        </ul>
-
-        <h3 className="text-2xl font-semibold mb-3">💡 Why This Matters</h3>
-        <p className="leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
-          Manual data analysis is tedious and error-prone. This tool empowers users to quickly get meaningful insights without technical skills, saving time and making data-driven decisions accessible to everyone.
-        </p>
-      </section>
-
-      {/* Reddit Automation */}
-      <section>
-        <h2 className="text-3xl font-bold font-poppins mb-6">
-          🤖 Reddit Automation with LLaMA
-        </h2>
-
-        <div className="mb-6">
-          <video
-            src={video1}
-            controls
+        <figure>
+          <img
+            src={img2}
+            alt="Teacher dashboard interface"
             className="w-full rounded-lg shadow-lg border border-gray-200 dark:border-gray-700"
           />
-        </div>
-
-        <p className="leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
-          This tool automates content creation and engagement on Reddit using LLaMA. It generates intelligent posts and replies across any subreddit, ideal for marketing campaigns, discussion bots, or educational outreach.
-        </p>
-
-        <h3 className="text-2xl font-semibold mb-3">🚀 Key Features</h3>
-        <ul className="list-disc list-inside space-y-3 text-gray-700 dark:text-gray-300 mb-6">
-          <li>Auto-generates context-aware posts and comments</li>
-          <li>Works on any subreddit with customizable behavior</li>
-          <li>Built-in toxicity filters for safe interactions</li>
-          <li>Supports diverse use cases: growth, engagement, content seeding</li>
-          <li>Powered by LLaMA and Reddit API for seamless integration</li>
-        </ul>
-
-        <h3 className="text-2xl font-semibold mb-3">💡 Why This Matters</h3>
-        <p className="leading-relaxed text-gray-700 dark:text-gray-300 mb-6">
-          Maintaining active, engaging social media presence is time-consuming. This automation reduces manual effort while ensuring high-quality, relevant interaction—perfect for startups and brands aiming to grow communities efficiently.
-        </p>
+          <figcaption className="text-sm text-center text-gray-500 dark:text-gray-400 mt-2">
+            Figure 2: Teacher dashboard interface
+          </figcaption>
+        </figure>
       </section>
 
       <section>
         <h2 className="text-2xl font-semibold mb-3">🛠️ Available for Customization</h2>
         <p className="leading-relaxed text-gray-700 dark:text-gray-300">
-          Both modules are adaptable to your unique workflows and requirements. Whether you want to customize analysis features or automate other social media platforms, I’m open to collaboration and product enhancement.
+          This platform can be customized for institutions or businesses that need automated
+          assessment solutions. I'm open to collaboration or product adaptations based on your
+          unique use case.
         </p>
       </section>
     </div>
   );
 };
 
-export default Project6;
+export default Project1;

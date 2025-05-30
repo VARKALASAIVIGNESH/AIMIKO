@@ -3,22 +3,22 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-50 dark:bg-[#121212]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <header className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold font-poppins text-[#212121] dark:text-[#E0E0E0] mb-4">
             About Us
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-[#C62828] to-[#7B1FA2] mx-auto"></div>
-        </div>
+        </header>
 
         {/* Brand Description */}
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-gray-700 dark:text-gray-300 font-inter leading-relaxed">
-            <strong className="text-[#C62828] dark:text-[#F06292]">AIMIKO</strong> is an AI-first innovation studio crafting intelligent solutions for next-gen startups. 
-            From custom chatbots and LLM-powered assistants to automation systems and AI diagnostics, 
-            we help businesses scale with smart, reliable technology. 
+        <article className="max-w-4xl mx-auto text-center">
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-inter leading-relaxed mb-8">
+            <strong className="text-[#C62828] dark:text-[#F06292]">AIMIKO</strong> is an AI-first innovation studio crafting intelligent solutions for next-gen startups.
+            From custom chatbots and LLM-powered assistants to automation systems and AI diagnostics,
+            we help businesses scale with smart, reliable technology.
             Based in India and serving globally, our mission is to make artificial intelligence simple, scalable, and impactful.
           </p>
-        </div>
+        </article>
 
         {/* Value Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -46,7 +46,7 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className={`p-6 rounded-xl shadow-md dark:shadow-none bg-white dark:bg-[#1A1A1A] text-center transition-all duration-300 hover:scale-105 hover:shadow-xl`}
+              className="p-6 rounded-xl shadow-md dark:shadow-none bg-white dark:bg-[#1A1A1A] text-center transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               <h3
                 className={`text-xl font-semibold mb-3 bg-clip-text text-transparent bg-gradient-to-r ${item.color}`}
@@ -59,6 +59,17 @@ const About = () => {
             </div>
           ))}
         </div>
+
+        {/* Bold Tagline */}
+        {/* Bold Tagline */}
+<div className="mt-24 text-center">
+  <p
+    className="text-xl md:text-2xl lg:text-3xl font-semibold italic bg-gradient-to-r from-[#C62828] to-[#7B1FA2] text-transparent bg-clip-text dark:from-[#FF8A65] dark:to-[#CE93D8] fade-in-up"
+  >
+    "We don’t just build AI — we help you shape bold ideas with it"
+  </p>
+</div>
+
       </div>
     </section>
   );

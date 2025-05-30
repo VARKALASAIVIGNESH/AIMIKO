@@ -93,6 +93,7 @@ const Project3 = () => {
           <li><strong>User-Friendly:</strong> Designed for easy adoption by non-technical users and professionals alike.</li>
         </ul>
       </section>
+      <h2 className="text-2xl font-semibold mb-4">Contact for OPEN CV Projects</h2>
     </div>
   );
 };
